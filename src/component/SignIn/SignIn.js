@@ -14,7 +14,7 @@ const SignIn = () => {
 		if (user) {
 			navigate(dest);
 		}
-	}, [user]);
+	}, [user,dest,navigate]);
 
 	return (
 		<div className='flex justify-center items-center flex-col'>

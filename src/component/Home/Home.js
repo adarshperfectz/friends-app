@@ -1,7 +1,7 @@
 import React from 'react';
 import Chat from '../Chat/Chat';
 import Sidebar from '../Sidebar/Sidebar';
-import { Route, Routes } from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
 import Style from './Home.module.scss';
 const Home = () => {
 	return (

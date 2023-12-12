@@ -5,7 +5,7 @@ import { BsSearch, BsThreeDotsVertical, BsEmojiHeartEyes, BsMic } from 'react-ic
 import { IoAttachOutline } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
 import db, { auth } from '../../firebase';
-import { collection, getDocs, doc, addDoc, onSnapshot, serverTimestamp, orderBy, query } from "firebase/firestore";
+import { collection, doc, addDoc, onSnapshot, serverTimestamp, orderBy, query } from "firebase/firestore";
 import { useAuthState } from 'react-firebase-hooks/auth';
 const Chat = () => {
 	const [input, setInput] = useState('');
@@ -37,7 +37,7 @@ const Chat = () => {
 
 		}
 
-	}, [roomId]);
+	}, [roomId,connRef]);
 
 
 
@@ -78,9 +78,9 @@ const Chat = () => {
 			<div className={`${Style.chat__body}`}>
 				{
 					message.map((msg) => (
-						<div className={`${Style.chat__message} ${msg.name == user.displayName ? Style.chat__receiver : ''} `}>
+						<div className={`${Style.chat__message} ${msg.name === user.displayName ? Style.chat__receiver : ''} `}>
 							{
-								msg.name == user.displayName ?
+								msg.name === user.displayName ?
 									'' : <span className={`${Style.chat__name}`}>{msg.name}</span>
 
 							}

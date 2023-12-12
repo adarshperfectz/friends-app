@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './SidebarChat.module.scss';
+// import Style from './SidebarChat.module.scss';
 import { Link } from 'react-router-dom';
 const SidebarChat = (props) => {
 	return (

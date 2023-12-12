@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { HiOutlineUserCircle } from 'react-icons/hi';
+// import { HiOutlineUserCircle } from 'react-icons/hi';
 import { FiMoreVertical } from 'react-icons/fi';
 import { MdOutlineDonutLarge } from 'react-icons/md';
 import { BsFillChatLeftTextFill, BsSearch } from 'react-icons/bs';
@@ -8,7 +8,7 @@ import Style from './Sidebar.module.scss';
 import SidebarChat from '../SidebarChat/SidebarChat';
 //firebase
 import db from '../../firebase';
-import { collection, onSnapshot, doc, addDoc } from "firebase/firestore";
+import { collection, onSnapshot, addDoc } from "firebase/firestore";
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -30,7 +30,7 @@ const Sidebar = () => {
 		
 
 
-	}, []);
+	}, [connRef]);
 
 	const addNewRoom = (e) => {
 		e.preventDefault();
