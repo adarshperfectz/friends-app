@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "build",
+    "site": "sample-for-cicd",
     "ignore": [
       "firebase.json",
       "**/.*",
